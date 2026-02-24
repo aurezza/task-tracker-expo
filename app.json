@@ -1,15 +1,24 @@
 {
   "expo": {
-    "name": "task-tracker-expo",
+    "name": "Task Tracker Expo",
     "slug": "task-tracker-expo",
-    "version": "1.0.0",
+    "version": "1.0.2",
     "orientation": "portrait",
-    "icon": "./assets/images/icon.png",
+    "icon": "./assets/images/lion.png",
     "scheme": "tasktrackerexpo",
     "userInterfaceStyle": "automatic",
+    "notification": {
+      "icon": "./assets/images/lion_icon.png",
+      "color": "#ffffff"
+    },
     "newArchEnabled": true,
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.aurezzapinion.tasktrackerexpo",
+      "infoPlist": {
+        "ITSAppUsesNonExemptEncryption": false
+      },
+      "buildNumber": "2"
     },
     "android": {
       "adaptiveIcon": {
@@ -19,7 +28,8 @@
         "monochromeImage": "./assets/images/android-icon-monochrome.png"
       },
       "edgeToEdgeEnabled": true,
-      "predictiveBackGestureEnabled": false
+      "predictiveBackGestureEnabled": false,
+      "package": "com.aurezzapinion.tasktrackerexpo"
     },
     "web": {
       "output": "static",
@@ -38,11 +48,19 @@
             "backgroundColor": "#000000"
           }
         }
-      ]
+      ],
+      "expo-localization",
+      "@react-native-community/datetimepicker"
     ],
     "experiments": {
       "typedRoutes": true,
       "reactCompiler": true
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "d0101d40-1bac-4530-a299-0914cb03c0f6"
+      }
     }
   }
 }
